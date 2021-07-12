@@ -1,0 +1,28 @@
+{% extends "workout_finder/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <center>
+        <h1 class="display-1">Create a workout</h1>
+
+        <button type="button" class="btn btn-info" id="createWorkoutBtn">Create</button>
+    </center>
+
+    <div id="exercise-container"></div>
+
+    <button type="button" class="btn btn-secondary" id="addExerciseBtn">Add another exercise</button>
+    <button type="button" class="btn btn-primary" id="beginWorkoutBtn">Start workout</button>
+    <button type="button" class="btn btn-info" id="continueWorkoutBtn">Continue</button>
+
+    <div class="alert alert-success" role="alert" id="complete-alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>You have completed your workout!! You got through it and very well! If you would like to create another workout select the 'Complete workout' button below!</p>
+        <hr>
+    </div>
+    
+    <button type="button" class="btn btn-primary" id="completeWorkoutBtn">Complete Workout</button>
+    
+    {% block script %}
+        <script src="{% static 'workout_finder/workout_finder.js' %}"></script>
+    {% endblock %}
+{% endblock %}
